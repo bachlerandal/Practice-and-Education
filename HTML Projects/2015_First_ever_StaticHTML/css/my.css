@@ -1,0 +1,250 @@
+/*my.css*/
+/*
+
+        Name        : Randal Bachle
+        Class       : CIST 1300-002
+        Assign#     : Assignment 4
+        Due         : September 22nd, 2015
+
+        Honor Pledge:  On my honor as a student of the University of Nebraska at Omaha, I have neither given nor recieved unauthorized help on this homework assignment.
+
+        NAME: Randal Bachle
+        EMAIL: rabchle@unomaha.edu
+
+        Partners: None
+
+        DESC: Assignemnt 4, Music and Videos
+
+*/ 
+
+
+/* Sets the font elements */
+
+	body 
+	{
+	font-family: "Times New Roman", serif;
+	} 
+
+	small 
+	{
+	font-style: italic;
+	font-weight: bold;
+	}
+
+/* Sets .bold elements*/
+
+	.bold
+	{
+	font-weight: bold;
+	color: #D00000;
+	}
+
+/* Sets .italics elements*/
+
+	.italics
+	{
+	font-style: italic;
+	}
+
+/* Sets h1 elements */
+
+	h1, small 
+	{
+	font-variant: small-caps;
+	color: #00008B;
+	text-align: right;
+	}
+
+/* Sets div elements */
+
+	div 
+	{
+	border: 2px dashed #00008B;
+	background-color: #eeeeee;
+	margin: 20px;
+	padding: 15px;
+	width: 650px;
+	}
+
+/* Sets p elements */
+
+	p
+	{
+	font-family: "Arial", sans-serif;
+	}
+
+/* Sets img elements */
+
+	img 
+	{
+	border: 0px;
+	padding: 15px;
+	float: left;
+	}
+
+/* Set blockquote elements */
+
+	blockquote 
+	{
+	font-family: "Arial", sans-serif;
+	}
+
+/* Sets a elements */
+
+	a 
+	{
+	font-family: "Arial", sans-serif;
+	color: #8B0000;
+	text-decoration: none;
+	}
+
+/* Sets a:link elements */
+
+	a:link 
+	{
+	font-weight: bold;
+	}
+
+/* Sets a:hover elements */
+
+	a:hover 
+	{
+	background-color: #8B0000;
+	color: #eeeeee;
+	}
+
+/* Sets daily values */
+
+	#daily 
+	{
+	width: 600px;
+	border-spacing: 1px;
+	background-color: #191970;
+	}
+
+/* Sets tr values */
+
+	tr 
+	{
+	text-align: center;
+	background-color: #d3d3d3;
+	}
+
+/* Sets tr:hover values */
+
+	tr:hover 
+	{
+	background-color: #121312;
+	color: #ffffff;
+	}
+
+/* Sets td values */
+
+	td 
+	{
+	width: 100px;
+	}
+
+/* Sets td:hover values */
+
+	td:hover 
+	{
+	background-color: #8B0000;
+	color: #ffffff;
+	}
+
+/* Sets th values */
+
+	th 
+	{
+	width: 100px;
+	}
+
+/* Sets th:hover values */
+
+	th:hover 
+	{
+	background-color: #8B0000;
+	color: #ffffff;
+	}
+
+/* Sets .meal values */
+
+	.meal 
+	{
+	background-color: #00008B;
+	color: #ffffff;
+	}
+
+/* Sets .school values */
+
+	.school 
+	{
+	background-color: #33FF00;
+	}
+
+/* Sets .meal values */
+
+	.meal 
+	{
+	background-color: #6699FF;
+	}
+
+/* Sets .gym values */
+
+	.gym 
+	{
+	background-color: #F80000;
+	}
+
+/* Sets .games values */
+
+	.games 
+	{
+	background-color: #99FF33;
+	}
+
+
+/* Sets .shower values */
+
+	.shower 
+	{
+	background-color: #FFFFFF;
+	}
+
+/* Sets h2, h3, h4, h5 values */
+
+	h2 
+	{
+	color: #00008b;
+	font-variant: small-caps;
+	float: right;
+	}
+
+	h3 
+	{
+	color: #00008b;
+	font-variant: small-caps;
+	float: right;
+	}
+
+	h4 
+	{
+	color: #00008b;
+	font-variant: small-caps;
+	float: right;
+	}
+
+	h5 
+	{
+	color: #00008b;
+	font-variant: small-caps;
+	float: right;
+	}
+	
+
+
+	
+	
+	
+	
