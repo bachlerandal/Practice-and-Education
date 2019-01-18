@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+
+        Name        : Randal Bachle
+        Class       : CIST 1300-002
+        Assign#     : Assignment 15 Dynamic Page
+        Due         : Dec 17th, 2015
+
+        Honor Pledge:  On my honor as a student of the University of Nebraska at Omaha, I have neither given nor recieved unauthorized help on this homework assignment.
+
+        NAME: Randal Bachle
+        EMAIL: rbachle@unomaha.edu
+
+        Partners: http://www.w3schools.com/ and the Computer Science Learning Center
+        DESC: Project Dynamic Page
+
+--> 
+
+
+<html>
+
+
+<head>
+
+<title>Forms!</title>
+<meta charset="utf-8">
+<link rel = "stylesheet" 
+type = "text/css"
+href = "project.css" />
+
+
+</head>
+
+<body>
+
+<div id="wrap">
+
+		<div id="banner">
+
+			<a href="index.html"><img src="images/banner1.jpg" alt="bannerpic" /></a>
+   
+        			<div id="navbar_container">
+             
+                			<ul id="links">
+
+                    			<li>
+                        		<a href="who_we_are.html"><img src="images/whoweare.jpg" alt="waw" /></a>
+                   			</li>
+
+                    			<li>
+                        		<a href="what_we_play.html"><img src="images/whatweplay.jpg" alt="wwp"/></a>
+                    			</li>
+
+                    			<li>
+                        		<a href="online_gaming.html"><img src="images/onlinegaming.jpg" alt="ogs" /></a>
+                    			</li>
+
+		    			<li>
+                        		<a href="tabletop_night.html"><img src="images/tabletopnight.jpg" alt="ttn" /></a>
+                    			</li>
+
+		    			<li>
+                        		<a href="talk_to_us.html"><img src="images/talktous.jpg" alt="ttu" /></a>
+                    			</li>
+
+                			</ul>
+            			</div>
+				</div>
+				</div>
+
+				<br><br><br><br><br><br>
+
+
+<form action="processtext.cgi" method="post">
+
+<h1>Please Rate our website! And drop us a line if you want to play some in-house games or shcedule a tournament/gamenight! <br>  All messages will go to the NerdAsylum email inbox.</h1>
+
+<br><br>
+
+Your Email: <br><input type="text" name="mailFrom"><br><br>
+Topic: <br><input type="text" name="subjectLine"><br><br>
+Message: <br><textarea rows="8" cols="50" name="message"></textarea><br><br>
+Our Site Rating on a scale of 1-10: <br><input type="text" name="rating"><br><br><br><br>
+
+
+<input type="submit" name="sbutton" value="Go">
+
+<input type="reset" value="Reset!" >
+
+</form>
+
+
+<br><br><br><br><br><br>
+<div id="validator">
+<h1> Validators </h1>
+    
+    <p>
+    <a href="http://validator.w3.org/check?uri=referer">
+    <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3.png"
+    width="66" height="44" alt="HTML 5 Validator" title="HTML5 Validator">
+    </a>
+   
+
+
+     
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+    src="http://www.w3.org/Style/CSS/Buttons/csstm" alt="Valid CSS!" />
+    </a>
+    </p>
+
+<br><br><br><br>
+
+</div>
+
+</body>
+</html>
