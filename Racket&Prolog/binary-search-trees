@@ -1,0 +1,99 @@
+#lang racket
+
+;; A binary search tree is binary search which satisfies the following
+;; invariant property: For any node N, every node in the left subtree of
+;; N has a value less than that of N, and every node in the right subtree
+;; of N has a value greater than that of N.
+;;
+;; Binary search trees may be represented as lists of the form (X L R)
+;; where X is the label of a node and L and R are the left and right
+;; subtrees respectively. An empty tree will be taken as equivalent to
+;; an empty list.
+
+
+;; The symbolic constant empty-tree is defined to be synonymous with the
+;; empty list, per our data model.
+
+(define empty-tree '())
+
+;; empty? : Binary Search Tree -> Boolean
+;; If T is a binary search tree, (empty? T) is true if and only if
+;; T is empty.
+
+(define (empty? T)
+  (null? T))
+
+;; leaf? : Binary Search Tree -> Boolean
+;; If T is a binary search tree, (leaf? T) is true if and only if T has no children.
+
+(define (leaf? T)
+  (and (null? (left-subtree T))
+       (null? (right-subtree T))))
+
+;; datum : Binary Search Tree -> Integer
+;; If T is a non-empty binary search tree, (datum T) is the root element of T.
+
+(define (datum T)
+  (car T))
+
+;; left-subtree : Binary Search Tree -> Binary Search Tree
+;; If T is a binary search tree, (left-subtree T) is the left subtree of T.
+
+(define (left-subtree T)
+  (car (cdr T)))
+
+;; right-subtree : Binary Search Tree -> Binary Search Tree
+;; If T is a binary search tree, (right-subtree T) is the right subtree of T.
+
+(define (right-subtree T)
+  (car (cdr (cdr T))))
+
+;; maximum : Binary Search Tree -> Integer
+;; If T is a binary search tree, (maximum T) is the maximal element within the T.
+
+(define (maximum T)
+  (cond
+    [(null? (right-subtree T)) (datum T)]
+    [else (maximum (right-subtree T))]))
+
+;; add-element : Binary Search Tree x Integer -> Binary Search Tree
+;; If T is a binary search tree and X is an integer, (add-element T X) is the
+;; binary search tree that results from adding X to T.
+
+(define (add-element T X)
+  (cond
+    [(null? T) (list X empty-tree empty-tree)]
+    [(< X (datum T)) (list (datum T) (add-element (left-subtree T) X) (right-subtree T))]
+    [(> X (datum T)) (list (datum T) (left-subtree T) (add-element (right-subtree T) X))]
+    [else T]))
+
+;; contains? : Binary Search Tree x Integer -> Boolean
+;; If T is a binary search tree and X is an integer, (contains? T X) is true if
+;; and only if X is an element of T.
+
+(define (contains? T X)
+  (cond
+    [(empty? T) #f]
+    [(< X (datum T)) (contains? (left-subtree T) X)]
+    [(> X (datum T)) (contains? (right-subtree T) X)]
+    [else #t]))
+
+;; remove-element : Binary Search Tree x Integer -> Binary Search Tree
+;; If T is a binary search tree and X is an integer, (remove-element T X) is the
+;; binary search tree that results from removing X from T.
+
+(define (remove-element T X)
+  (cond
+    [(empty? T) T]
+    [(< X (datum T)) (list (datum T) (remove-element (left-subtree T) X) (right-subtree T))]
+    [(> X (datum T)) (list (datum T) (left-subtree T) (remove-element (right-subtree T) X))]
+    [(leaf? T) empty-tree]
+    [(and (null? (left-subtree T))
+          (not (null? right-subtree T)))
+     (right-subtree T)]
+    [(and (not (null? (left-subtree T)))
+          (null? (right-subtree T)))
+     (left-subtree T)]
+    [else (list (maximum (left-subtree T))
+                (remove-element (left-subtree T) (maximum (left-subtree T)))
+                (right-subtree T))]))
