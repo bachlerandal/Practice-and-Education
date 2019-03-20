@@ -1,4 +1,4 @@
-
+#Scraps movie data from boxofficemojo.com and sends it to an email that the user enters on the command line
 ##############################################################################################################################################################################################
 
 use Modern::Perl;
